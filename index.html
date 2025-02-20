@@ -6,48 +6,89 @@
     <title>Welcome to ground | shaking</title>
     <style>
         body {
-            margin: 75; /* Remove default body margin */
+            margin: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure full viewport height */
-            font-family: sans-serif; /* Fallback font */
-            background-color: #2B6CA3; /* Example background color - change as needed */
+            min-height: 100vh;
+            font-family: sans-serif;
+            background-color: #2B6CA3;
+            color: #d4d4d4;
         }
 
         h1 {
-            margin-top: 325px; /* Adjust as needed */
-            text-align: left; /* Consistent with your request */
-            color: #d4d4d4;
-            margin: 50px;
-            font-family: 'Roboto Bold', sans-serif; /* Roboto Bold for "Welcome to" */
+            margin-top: 325px;
+            text-align: left;
+            margin: 75px;
+            font-family: 'Roboto Bold', sans-serif;
+            padding: 33px;
         }
 
-        .shaking { /* Span for "ground | shaking" with different font */
-            font-family: 'Roboto Thin', sans-serif; /* Roboto Thin for "ground | shaking" */
-            padding: 33px;  
+        .shaking {
+            font-family: 'Roboto Thin', sans-serif;
         }
-        
-        .copyright {
-            margin-top: 600px; /* Push copyright to bottom */
+
+        .image-container {
+            display: flex;
+            justify-content: left; /* Align images to the left */
+            margin: 75px; /* Add margin for spacing around the image group */
+        }
+
+        .image-container img {
+            max-width: 150px; /* Adjust image size as needed */
+            height: auto;
+            margin-right: 20px; /* Space between images */
+        }
+
+        .play-text {
+            margin-top: 400px;
             text-align: left;
-            color: #d4d4d4;
-            margin: 50px;
+            margin-left: 75px; /* Adjust left margin to align with the title */
+            font-family: 'Raleway SemiBold', sans-serif;
+            padding: 17px;
+        }
+
+        .play-image {
+            margin-left: 75px; /* Align with other content */
+            margin-top: 20px; /* Space between text and image */
+            max-width: 150px; /* Adjust image size */
+        }
+
+        .copyright {
+            margin-top: auto;
+            text-align: left;
+            margin: 75px;
             font-family: 'Roboto Thin', sans-serif;
             padding: 15px;
         }
 
-       /* Import Roboto fonts (if not already included in your project) */
-       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap'); /* Example - adjust weights as needed */
-        
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Raleway:wght@600&display=swap');
     </style>
 </head>
 <body>
 
-    
-    <h1>Welcome to <span class="shaking">ground | shaking</span></h1>
+    <h1>Welcome to <a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: inherit; text-decoration: none;"><span class="shaking">ground | shaking</span></a></h1>
 
-    
+    <div class="image-container">
+        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="image1.jpg" alt="Image 1"></a>
+        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="image2.jpg" alt="Image 2"></a>
+        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="image3.jpg" alt="Image 3"></a>
+        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="image4.jpg" alt="Image 4"></a>
+    </div>
+
+    <div class="play-text">play</div>
+
+    <a href="https://groundshaking.wixsite.com/groundshakinggo" class="play-image"><img src="image5.jpg" alt="Image 5"></a>
+
     <div class="copyright">Copyright &copy; 2016-2025 ground | shaking. All rights reserved.</div>
 
+    <script>
+        // Placeholders: Replace with actual image URLs
+        document.querySelector('.image-container img:nth-child(1)').src = 'image1.jpg';
+        document.querySelector('.image-container img:nth-child(2)').src = 'image2.jpg';
+        document.querySelector('.image-container img:nth-child(3)').src = 'image3.jpg';
+        document.querySelector('.image-container img:nth-child(4)').src = 'image4.jpg';
+        document.querySelector('.play-image img').src = 'image5.jpg';
+    </script>
 </body>
 </html>
