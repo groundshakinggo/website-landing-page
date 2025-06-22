@@ -24,8 +24,8 @@
 
     html, body {
       font-family: var(--font-primary);
-      background-color: var(--light-grey);
-      color: var(--dark-grey);
+      background-color: var(--red);
+      color: var(--light-grey);
       height: 100%;
       overflow: hidden;
     }
@@ -35,7 +35,6 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
-      background-color: var(--light-grey);
     }
 
     .slider {
@@ -52,12 +51,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: var(--light-grey);
+      align-items: center;
     }
 
     h1 a {
       font-size: 2.75rem;
-      color: var(--red);
+      color: var(--light-grey);
       font-weight: 500;
       text-decoration: none;
       margin: 1.2rem 0;
@@ -65,24 +64,26 @@
 
     h2 {
       font-size: 1.75rem;
-      color: var(--dark-grey);
+      color: var(--light-grey);
       font-weight: 500;
       margin-bottom: 1.2rem;
       max-width: 860px;
       line-height: 1.5;
+      text-align: center;
     }
 
     p {
       font-size: 1.05rem;
-      color: var(--medium-grey);
+      color: var(--light-grey);
       max-width: 700px;
       line-height: 1.6;
       margin-bottom: 1.8rem;
+      text-align: center;
     }
 
     a.button {
-      background-color: var(--red);
-      color: white;
+      background-color: var(--light-grey);
+      color: var(--red);
       text-decoration: none;
       padding: 0.75rem 1.6rem;
       border-radius: 4px;
@@ -96,19 +97,32 @@
     a.arrow {
       font-size: 2rem;
       text-decoration: none;
-      color: var(--red);
+      color: var(--light-grey);
       display: inline-block;
       margin-bottom: 2rem;
     }
 
+    .logos {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .logos img {
+      max-height: 50px;
+      width: auto;
+    }
+
     .copyright {
       font-size: 0.8rem;
-      color: var(--medium-grey);
+      color: var(--light-grey);
       position: absolute;
       bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
+      width: 100%;
     }
 
     .controls {
@@ -134,8 +148,8 @@
     }
 
     .control-btn:hover {
-      background-color: var(--red);
-      color: white;
+      background-color: var(--light-grey);
+      color: var(--red);
     }
 
     @media (max-width: 768px) {
@@ -157,6 +171,11 @@
       <div class="slide">
         <h2>For Visionary Entrepreneurs, Transformative Managers, and Dedicated Professionals — Daring to Shape Thy Future.</h2>
         <h1><a href="https://groundshaking.wixsite.com/groundshakinggo">Welcome to ground | shaking.</a></h1>
+        <div class="logos">
+          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo-1.png" alt="logo1"></a>
+          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo-2.png" alt="logo2"></a>
+          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo-3.png" alt="logo3"></a>
+        </div>
         <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
         <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
         <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
@@ -166,6 +185,11 @@
       <div class="slide">
         <h2>For Venture-Driven Founders, Bold Executives, and Relentless Builders — Daring to Shape Thy Future.</h2>
         <h1><a href="https://groundshaking.wixsite.com/groundshakinggo">Welcome to ground | shaking.</a></h1>
+        <div class="logos">
+          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo-4.png" alt="logo4"></a>
+          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo-5.png" alt="logo5"></a>
+          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo-6.png" alt="logo6"></a>
+        </div>
         <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
         <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
         <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
