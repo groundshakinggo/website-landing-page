@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ground | shaking</title>
+  <title>Welcome to ground | shaking</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
     :root {
       --red: #DE0F3F;
       --light-grey: #f2f2f2;
       --light-green: #D1DEAD;
       --dark-grey: #2E2F30;
       --medium-grey: #8D8D8D;
-      --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-primary: 'Montserrat', sans-serif;
     }
 
     * {
@@ -45,7 +47,7 @@
 
     .slide {
       width: 100vw;
-      padding: 10vh 8vw;
+      padding: 8vh 6vw;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
@@ -54,45 +56,45 @@
     }
 
     h1 a {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       color: var(--red);
       font-weight: 500;
       text-decoration: none;
-      margin-bottom: 1.5rem;
+      margin: 1.2rem 0;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       color: var(--dark-grey);
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      max-width: 900px;
-      line-height: 1.6;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      max-width: 860px;
+      line-height: 1.5;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--medium-grey);
-      max-width: 720px;
-      line-height: 1.7;
-      margin-bottom: 2rem;
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
     }
 
     a.button {
       background-color: var(--red);
       color: white;
       text-decoration: none;
-      padding: 0.75rem 1.8rem;
-      border-radius: 6px;
+      padding: 0.75rem 1.6rem;
+      border-radius: 4px;
       font-weight: 500;
       font-size: 1rem;
       display: inline-block;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       width: fit-content;
     }
 
     a.arrow {
-      font-size: 2.2rem;
+      font-size: 2rem;
       text-decoration: none;
       color: var(--red);
       display: inline-block;
@@ -100,7 +102,7 @@
     }
 
     .copyright {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--medium-grey);
       position: absolute;
       bottom: 1rem;
@@ -123,9 +125,9 @@
       background: var(--light-green);
       border: none;
       color: var(--dark-grey);
-      font-size: 2rem;
-      width: 3rem;
-      height: 3rem;
+      font-size: 1.8rem;
+      width: 2.8rem;
+      height: 2.8rem;
       border-radius: 50%;
       cursor: pointer;
       opacity: 0.9;
@@ -138,13 +140,13 @@
 
     @media (max-width: 768px) {
       h1 a {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       h2 {
         font-size: 1.4rem;
       }
       p {
-        font-size: 1rem;
+        font-size: 0.95rem;
       }
     }
   </style>
