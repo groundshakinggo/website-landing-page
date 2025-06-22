@@ -46,7 +46,7 @@
 
     .slide {
       width: 100vw;
-      padding: 8vh 6vw;
+      padding: 8vh 8vw 6vh 8vw;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
@@ -118,8 +118,10 @@
       color: var(--light-grey);
       position: absolute;
       bottom: 1rem;
-      left: 1rem;
-      text-align: left;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
     }
 
     .controls {
@@ -136,12 +138,12 @@
       background: var(--red);
       border: none;
       color: var(--light-grey);
-      font-size: 2.5rem;
-      width: 3.2rem;
-      height: 3.2rem;
+      font-size: 3rem;
+      width: 3.6rem;
+      height: 3.6rem;
       border-radius: 50%;
       cursor: pointer;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     .control-btn:hover {
@@ -176,7 +178,6 @@
         <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
         <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
         <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
-        <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
       </div>
 
       <div class="slide">
@@ -190,7 +191,6 @@
         <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
         <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
         <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
-        <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
       </div>
     </div>
 
@@ -198,6 +198,8 @@
       <button class="control-btn" onclick="prevSlide()">‹</button>
       <button class="control-btn" onclick="nextSlide()">›</button>
     </div>
+
+    <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
   </div>
 
   <script>
