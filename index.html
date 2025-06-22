@@ -24,13 +24,20 @@
       font-family: var(--font-primary);
       background-color: var(--light-grey);
       color: var(--dark-grey);
-      overflow: hidden;
       height: 100%;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .slider {
       display: flex;
-      height: 100vh;
+      height: 100%;
       width: 200vw;
       transition: transform 0.8s ease-in-out;
     }
@@ -96,6 +103,32 @@
       text-align: center;
     }
 
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+    }
+
+    .control-btn {
+      background: var(--red);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .control-btn:hover {
+      opacity: 1;
+    }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 1.8rem;
@@ -110,26 +143,58 @@
   </style>
 </head>
 <body>
-  <div class="slider" id="slider">
-    <!-- Page 1 -->
-    <div class="slide">
-      <h2>For Visionary Entrepreneurs, Transformative Managers, and Dedicated Professionals — Daring to Shape Thy Future.</h2>
-      <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
-      <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
-      <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
-      <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
-      <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <!-- Page 1 -->
+      <div class="slide">
+        <h2>For Visionary Entrepreneurs, Transformative Managers, and Dedicated Professionals — Daring to Shape Thy Future.</h2>
+        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
+        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
+        <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
+        <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
+        <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="slide">
+        <h2>For Venture-Driven Founders, Bold Executives, and Relentless Builders — Daring to Shape Thy Future.</h2>
+        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
+        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
+        <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
+        <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
+        <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
+      </div>
     </div>
 
-    <!-- Page 2 -->
-    <div class="slide">
-      <h2>For Venture-Driven Founders, Bold Executives, and Relentless Builders — Daring to Shape Thy Future.</h2>
-      <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
-      <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
-      <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
-      <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
-      <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
+    <!-- Manual Controls -->
+    <div class="controls">
+      <button class="control-btn" onclick="prevSlide()">‹</button>
+      <button class="control-btn" onclick="nextSlide()">›</button>
     </div>
   </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}vw)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % 2;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + 2) % 2;
+      showSlide(currentIndex);
+    }
+
+    // Auto slider
+    setInterval(() => {
+      nextSlide();
+    }, 10000); // Change slide every 10 seconds
+  </script>
 </body>
 </html>
