@@ -1,109 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to ground | shaking</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ground | shaking</title>
+  <style>
+    :root {
+      --red: #DE0F3F;
+      --light-grey: #f2f2f2;
+      --light-green: #D1DEAD;
+      --dark-grey: #2E2F30;
+      --medium-grey: #8D8D8D;
+      --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Raleway:wght@600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #B80B33; /* Dark Red Background */
-            color: #f2f2f2; /* Soft Grey Text */
-            align-items: center; /* Center content */
-            justify-content: center; /* Vertically center */
-            text-align: center;
-            margin-top: 27px;
-        }
+    html, body {
+      font-family: var(--font-primary);
+      background-color: var(--light-grey);
+      color: var(--dark-grey);
+      overflow: hidden;
+      height: 100%;
+    }
 
-        h1 {
-            margin-top: 17em; /* Moves the title 17 lines down */
-            margin: 50px auto;
-            font-family: 'Montserrat', sans-serif; /* Bold font for headline */
-            font-weight: 700;
-            font-size: 44px; /* Larger size for the headline */
-            padding: 20px;
-            margin: 20px 0;
-        }
+    .slider {
+      display: flex;
+      height: 100vh;
+      width: 200vw;
+      transition: transform 0.8s ease-in-out;
+    }
 
-        .shaking {
-            font-weight: 100;
-        }
+    .slide {
+      width: 100vw;
+      padding: 5vh 10vw;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: var(--light-grey);
+    }
 
-        .content-line {
-            display: inline-flex;
-            align-items: center; /* Aligns vertically */
-            margin-top: 17em; /* Moves the content line 17 lines down */
-            justify-content: center; /* Centers horizontally */
-            gap: 0px; /* Adds space between images */
-            margin: 20px auto;
-        }
+    h1 {
+      font-size: 2.4rem;
+      color: var(--red);
+      margin-bottom: 1rem;
+    }
 
-        .content-line img {
-            max-width: 50px;
-            height: auto;
-        }
+    h2 {
+      font-size: 1.5rem;
+      color: var(--dark-grey);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
 
-        .leadership-text {
-            font-family: 'Lora', sans-serif;
-            font-weight: 100;
-            font-style: italic;
-            text-align: center;
-            padding: 10px;
-            margin-top: 27px;
-            color: #f2f2f2; /* Soft Grey Text */
-            font-size: 44px; /* Adjusted font size */
-            margin-left: 66px;
-            margin-right: 33px;
-        }
+    p {
+      font-size: 1rem;
+      color: var(--medium-grey);
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
 
-        .play-text {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 600;
-            font-size: 22px; /* Moderate size */
-            padding: 10px 0; /* Reduced padding */
-            margin-right: 20px; /* Reduced margin */
-            margin-left: 15px; /* Reduced margin */
-            display: flex;
-            align-items: center; /* Aligns text vertically with the play image */
-        }
+    a.button {
+      background-color: var(--red);
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
 
-        .copyright {
-            margin-top: auto;
-            margin-bottom: 7em; /* Moves copyright 7 lines up */
-            text-align: center;
-            padding: 15px;
-            font-weight: 100;
-            font-size: 17px; /* Adjusted font size */
-        }
+    a.arrow {
+      font-size: 2rem;
+      text-decoration: none;
+      color: var(--red);
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
 
-    </style>
+    .copyright {
+      font-size: 0.8rem;
+      color: var(--medium-grey);
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <h1>Welcome to <a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: inherit; text-decoration: none;">
-        <span class="shaking">ground | shaking</span></a></h1>
-
-    <div class="content-line">
-        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.7.0.png" alt="g-s-logo 4.7.0.png"></a>
-        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.2.png" alt="g-s-logo 4.8.2.png"></a>
-        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.1.png" alt="g-s-logo 4.8.1.png"></a>
-        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.3.png" alt="g-s-logo 4.8.3.png"></a>
-        <div class="play-text">Start Playing</div>
-        <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="white play icon.png" alt="white play icon"></a>
+  <div class="slider" id="slider">
+    <!-- Page 1 -->
+    <div class="slide">
+      <h2>For Visionary Entrepreneurs, Transformative Managers, and Dedicated Professionals — Daring to Shape Thy Future.</h2>
+      <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
+      <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
+      <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
+      <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
+      <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
     </div>
 
-    <div class="leadership-text">
-        It's all about leadership, effective management, and driving sustainable, profitable growth.
+    <!-- Page 2 -->
+    <div class="slide">
+      <h2>For Venture-Driven Founders, Bold Executives, and Relentless Builders — Daring to Shape Thy Future.</h2>
+      <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
+      <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
+      <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
+      <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
+      <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
     </div>
-
-    <div class="copyright">Copyright &copy; 2016-2025 ground | shaking. All rights reserved.</div>
-
+  </div>
 </body>
 </html>
