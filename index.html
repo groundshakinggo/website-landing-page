@@ -11,7 +11,7 @@
       --light-green: #D1DEAD;
       --dark-grey: #2E2F30;
       --medium-grey: #8D8D8D;
-      --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     * {
@@ -33,6 +33,7 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      background-color: var(--light-grey);
     }
 
     .slider {
@@ -44,7 +45,7 @@
 
     .slide {
       width: 100vw;
-      padding: 5vh 10vw;
+      padding: 10vh 8vw;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
@@ -52,24 +53,28 @@
       background-color: var(--light-grey);
     }
 
-    h1 {
-      font-size: 2.4rem;
+    h1 a {
+      font-size: 2.5rem;
       color: var(--red);
-      margin-bottom: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: var(--dark-grey);
-      margin-bottom: 1rem;
-      line-height: 1.5;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+      line-height: 1.6;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--medium-grey);
-      max-width: 700px;
-      line-height: 1.6;
+      max-width: 720px;
+      line-height: 1.7;
       margin-bottom: 2rem;
     }
 
@@ -77,16 +82,17 @@
       background-color: var(--red);
       color: white;
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
+      padding: 0.75rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 500;
       font-size: 1rem;
       display: inline-block;
       margin-bottom: 2rem;
+      width: fit-content;
     }
 
     a.arrow {
-      font-size: 2rem;
+      font-size: 2.2rem;
       text-decoration: none;
       color: var(--red);
       display: inline-block;
@@ -94,7 +100,7 @@
     }
 
     .copyright {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--medium-grey);
       position: absolute;
       bottom: 1rem;
@@ -114,30 +120,31 @@
     }
 
     .control-btn {
-      background: var(--red);
+      background: var(--light-green);
       border: none;
-      color: white;
+      color: var(--dark-grey);
       font-size: 2rem;
       width: 3rem;
       height: 3rem;
       border-radius: 50%;
       cursor: pointer;
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
     .control-btn:hover {
-      opacity: 1;
+      background-color: var(--red);
+      color: white;
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
+      h1 a {
+        font-size: 2rem;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
       p {
-        font-size: 0.95rem;
+        font-size: 1rem;
       }
     }
   </style>
@@ -145,28 +152,25 @@
 <body>
   <div class="slider-container">
     <div class="slider" id="slider">
-      <!-- Page 1 -->
       <div class="slide">
         <h2>For Visionary Entrepreneurs, Transformative Managers, and Dedicated Professionals — Daring to Shape Thy Future.</h2>
-        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
-        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing</a>
+        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo">Welcome to ground | shaking.</a></h1>
+        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
         <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
         <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
         <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
       </div>
 
-      <!-- Page 2 -->
       <div class="slide">
         <h2>For Venture-Driven Founders, Bold Executives, and Relentless Builders — Daring to Shape Thy Future.</h2>
-        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo" style="color: var(--red); text-decoration: none;">Welcome to ground | shaking.</a></h1>
-        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing</a>
+        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo">Welcome to ground | shaking.</a></h1>
+        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">start playing ⇨</a>
         <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
         <a class="arrow" href="https://groundshaking.wixsite.com/groundshakinggo">→</a>
         <div class="copyright">Copyright © 2016–2025 ground | shaking. All rights reserved.</div>
       </div>
     </div>
 
-    <!-- Manual Controls -->
     <div class="controls">
       <button class="control-btn" onclick="prevSlide()">‹</button>
       <button class="control-btn" onclick="nextSlide()">›</button>
@@ -191,10 +195,9 @@
       showSlide(currentIndex);
     }
 
-    // Auto slider
     setInterval(() => {
       nextSlide();
-    }, 10000); // Change slide every 10 seconds
+    }, 10000);
   </script>
 </body>
 </html>
