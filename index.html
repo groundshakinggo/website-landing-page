@@ -1,215 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to ground | shaking</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-    :root {
-      --red: #c00000;
-      --light-grey: #f2f2f2;
-      --light-green: #D1DEAD;
-      --dark-grey: #2E2F30;
-      --medium-grey: #8D8D8D;
-      --font-primary: 'Montserrat', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      font-family: var(--font-primary);
-      background-color: var(--red);
-      color: var(--light-grey);
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .slider-container {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .slider {
-      display: flex;
-      height: 100%;
-      width: 200vw;
-      transition: transform 0.8s ease-in-out;
-    }
-
-    .slide {
-      width: 100vw;
-      padding: 8vh 8vw 6vh 10vw;
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    h1 a {
-      font-size: 2.75rem;
-      color: var(--light-grey);
-      font-weight: 500;
-      text-decoration: none;
-      margin: 1.2rem 0;
-    }
-
-    h2 {
-      font-size: 1.75rem;
-      color: var(--light-grey);
-      font-weight: 500;
-      margin-bottom: 2.5rem;
-      max-width: 860px;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    p {
-      font-size: 1.05rem;
-      color: var(--light-grey);
-      max-width: 700px;
-      line-height: 1.6;
-      margin-top: 2rem;
-      text-align: left;
-    }
-
-    a.button {
-      background-color: var(--light-grey);
-      color: var(--red);
-      text-decoration: none;
-      padding: 0.75rem 1.6rem;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 1rem;
-      display: inline-block;
-      margin: 2rem 0;
-    }
-
-    .logos {
-      display: flex;
-      gap: 0.25rem;
-      justify-content: flex-start;
-      margin-bottom: 2rem;
-    }
-
-    .logos img {
-      max-height: 50px;
-      width: auto;
-    }
-
-    .copyright {
-      font-size: 0.8rem;
-      color: var(--light-grey);
-      position: absolute;
-      bottom: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      width: 100%;
-    }
-
-    .controls {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 2rem;
-    }
-
-    .control-btn {
-      background: var(--red);
-      border: none;
-      color: var(--light-grey);
-      font-size: 3rem;
-      width: 3.6rem;
-      height: 3.6rem;
-      border-radius: 50%;
-      cursor: pointer;
-      opacity: 0.95;
-    }
-
-    .control-btn:hover {
-      background-color: var(--light-grey);
-      color: var(--red);
-    }
-
-    @media (max-width: 768px) {
-      h1 a {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1.4rem;
-      }
-      p {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#C00000">
+  <meta name="description" content="ground | shaking helps founders and leadership teams turn ambition into measurable business performance.">
+  <title>ground | shaking — Scale without the stumble</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="slider-container">
-    <div class="slider" id="slider">
-      <div class="slide">
-        <h2>For Visionary Entrepreneurs, Transformative Managers, and Dedicated Professionals — Daring to Shape Thy Future.</h2>
-        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo">Welcome to ground | shaking</a></h1>
-        <div class="logos">
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.7.0.png" alt="g-s-logo 4.7.0.png"></a>
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.2.png" alt="g-s-logo 4.8.2.png"></a>
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.1.png" alt="g-s-logo 4.8.1.png"></a>
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.3.png" alt="g-s-logo 4.8.3.png"></a>
-        </div>
-        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">CREATE THE BUSINESS YOU’RE ENVISIONING. CLICK HERE TO START.</a>
-        <p>It’s all about leadership, effective management, and driving sustainable, profitable growth. We work with change-makers ready to outgrow outdated playbooks — helping you translate vision into bold strategy, and bold strategy into lasting results.</p>
-      </div>
+  <main class="landing" aria-label="ground | shaking homepage">
+    <div class="slides" id="slides" aria-live="off">
+      <!-- OPTION A: Universal Hero -->
+      <section class="slide is-active" id="option-a" aria-labelledby="headline-a" aria-hidden="false">
+        <div class="slide-inner">
+          <a class="brand" href="https://groundshaking.wixsite.com/groundshakinggo" target="_blank" rel="noopener noreferrer">
+            welcome to <span>ground | shaking</span>
+          </a>
 
-      <div class="slide">
-        <h2>For Venture-Driven Founders, Bold Executives, and Relentless Builders — Daring to Shape Thy Future.</h2>
-        <h1><a href="https://groundshaking.wixsite.com/groundshakinggo">Welcome to ground | shaking</a></h1>
-        <div class="logos">
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.7.0.png" alt="g-s-logo 4.7.0.png"></a>
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.2.png" alt="g-s-logo 4.8.2.png"></a>
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.1.png" alt="g-s-logo 4.8.1.png"></a>
-          <a href="https://groundshaking.wixsite.com/groundshakinggo"><img src="g-s-logo 4.8.3.png" alt="g-s-logo 4.8.3.png"></a>
+          <div class="audience">
+            <h1 id="headline-a">For Venture-Driven Founders, Bold Executives, and<br class="desktop-break"> Relentless Builders — Daring to Shape Thy Future.</h1>
+          </div>
+
+          <div class="advantage">
+            <h2>Own the ultimate unfair advantage:</h2>
+            <p>Gain direct execution support and strategic backing from people who have<br class="desktop-break">
+              successfully scaled, turned around, and grown businesses multiple times before.</p>
+          </div>
+
+          <div class="primary-action">
+            <a class="pill-button" href="https://cal.com/groundshakinggo/specialized-consultations-the-one-meeting"
+               target="_blank" rel="noopener noreferrer">Hit the ground running</a>
+            <p class="microcopy"><em>No long-term commitment required.<br>75-minute executive session.</em></p>
+          </div>
+
+          <div class="secondary-action">
+            <p>Create the business you’re envisioning.</p>
+            <a class="pill-button" href="https://groundshaking.wixsite.com/groundshakinggo"
+               target="_blank" rel="noopener noreferrer">Discover our approach</a>
+          </div>
+
+          <p class="positioning">We partner with high-growth leaders to architect clarity in chaos,<br class="desktop-break">
+            scale with discipline, and lead teams through volatility with precision<br class="desktop-break">
+            and grit. This isn’t management consulting. This is management in<br class="desktop-break">
+            motion.</p>
+
+          <a class="closing-line" href="https://groundshaking.wixsite.com/groundshakinggo"
+             target="_blank" rel="noopener noreferrer">Accelerate your growth journey. Scale without the stumble.</a>
         </div>
-        <a class="button" href="https://groundshaking.wixsite.com/groundshakinggo">CREATE THE BUSINESS YOU’RE ENVISIONING. CLICK HERE TO START.</a>
-        <p>We partner with high-growth leaders to architect clarity in chaos, scale with discipline, and lead teams through volatility with precision and grit. This isn’t management consulting. This is management in motion.</p>
-      </div>
+      </section>
+
+      <!-- OPTION B: Targeted Hero -->
+      <section class="slide" id="option-b" aria-labelledby="headline-b" aria-hidden="true">
+        <div class="slide-inner">
+          <a class="brand" href="https://groundshaking.wixsite.com/groundshakinggo" target="_blank" rel="noopener noreferrer">
+            welcome to <span>ground | shaking</span>
+          </a>
+
+          <div class="audience">
+            <h1 id="headline-b">For Visionary Entrepreneurs, Transformative Managers, and<br class="desktop-break">
+              Dedicated Professionals — Daring to Shape Thy Future.</h1>
+          </div>
+
+          <div class="advantage">
+            <h2>Own the ultimate unfair advantage:</h2>
+            <p>Gain direct execution support and strategic backing from people who have<br class="desktop-break">
+              successfully scaled, turned around, and grown businesses multiple times before.</p>
+          </div>
+
+          <div class="primary-action">
+            <a class="pill-button" href="https://cal.com/groundshakinggo/specialized-consultations-the-one-meeting"
+               target="_blank" rel="noopener noreferrer">Hit the ground running</a>
+            <p class="microcopy"><em>No long-term commitment required.<br>75-minute executive session.</em></p>
+          </div>
+
+          <div class="secondary-action">
+            <p>Create the business you’re envisioning.</p>
+            <a class="pill-button" href="https://groundshaking.wixsite.com/groundshakinggo"
+               target="_blank" rel="noopener noreferrer">Discover our approach</a>
+          </div>
+
+          <p class="positioning">It’s all about leadership, effective management, and driving<br class="desktop-break">
+            sustainable, profitable growth. We work with change-makers ready to<br class="desktop-break">
+            outgrow outdated playbooks — helping you translate vision into bold<br class="desktop-break">
+            strategy, and bold strategy into lasting results.</p>
+
+          <a class="closing-line" href="https://groundshaking.wixsite.com/groundshakinggo"
+             target="_blank" rel="noopener noreferrer">Accelerate your growth journey. Scale without the stumble.</a>
+        </div>
+      </section>
     </div>
 
-    <div class="copyright">Copyright © 2016–2026 ground | shaking. All rights reserved.</div>
-  </div>
+    <!-- Minimal slider controls: no site header or footer. -->
+    <nav class="slider-controls" aria-label="Choose homepage concept">
+      <button class="arrow" id="previous" type="button" aria-label="Previous slide">
+        <span aria-hidden="true">‹</span>
+      </button>
+      <div class="dots" role="group" aria-label="Slide selection">
+        <button class="dot is-current" type="button" data-slide="0" aria-label="Show Option A" aria-pressed="true"></button>
+        <button class="dot" type="button" data-slide="1" aria-label="Show Option B" aria-pressed="false"></button>
+      </div>
+      <button class="arrow" id="next" type="button" aria-label="Next slide">
+        <span aria-hidden="true">›</span>
+      </button>
+      <span class="slide-status" id="slide-status">01 / 02</span>
+    </nav>
 
-  <script>
-    const slider = document.getElementById('slider');
-    let currentIndex = 0;
+    <p class="copyright">Copyright © 2016-2026 ground | shaking. All rights reserved.</p>
+    <div class="progress-track" aria-hidden="true"><span id="progress"></span></div>
+  </main>
 
-    function showSlide(index) {
-      slider.style.transform = `translateX(-${index * 100}vw)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % 2;
-      showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + 2) % 2;
-      showSlide(currentIndex);
-    }
-
-    setInterval(() => {
-      nextSlide();
-    }, 15000);
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
