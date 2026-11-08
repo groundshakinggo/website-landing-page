@@ -8,7 +8,7 @@ A responsive, two-slide landing page based on the supplied two-page PDF:
 
 - `index.html` — page content, both hero concepts, external links and slider controls
 - `styles.css` — responsive layout, typography, colour, spacing and transitions
-- `script.js` — 22-second carousel, manual controls, keyboard and touch navigation, reduced-motion handling
+- `script.js` — 22-second carousel
 
 ## Run locally
 
@@ -31,10 +31,6 @@ A responsive, two-slide landing page based on the supplied two-page PDF:
 - Brand palette: `#C00000` and `#FFFFFF`.
 - No conventional site header or footer. The brand welcome line is part of each hero slide; the requested copyright notice is centred at the bottom.
 - Automatic slide change every 22 seconds.
-- Manual previous/next arrows and slide dots.
-- Pauses while the pointer is over the landing page or keyboard focus is inside it.
-- Supports keyboard arrows and touch swipe.
-- Respects `prefers-reduced-motion`; automatic rotation is disabled when the visitor requests reduced motion.
 - External links open in a new tab with `rel="noopener noreferrer"`.
 
 ## Security and maintenance notes
